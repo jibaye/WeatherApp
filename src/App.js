@@ -4,7 +4,6 @@ import CurrentWeather from "./components/current-weather/current-weather";
 import { WEATHER_API_KEY, WEATHER_API_URL } from "./api";
 import { useState } from "react";
 import Forecast from "./components/forecast/forecast";
-import WeatherColor from "./components/current-weather/weather-color";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -38,7 +37,7 @@ console.log(forecast)
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast}/>}
-      {/* <WeatherColor data={currentWeather}/> */}
+    
     </div>
   );
 }
